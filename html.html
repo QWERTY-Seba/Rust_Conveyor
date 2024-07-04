@@ -1,0 +1,136 @@
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>RUST_CONVEYOR</title>
+
+
+
+  <style id="compiled-css" type="text/css">
+    
+table{
+  border: 1px solid black;
+  margin: 10px;
+}
+
+body{
+  padding: 10px;
+}
+
+td,th{
+  border: 1px solid black;
+  width: 260px;
+}
+th#img{
+  width: 50px;
+}
+
+.input_recurso, .input_categoria{
+  width: 100px;
+  height: 100px;
+  border: 1px solid green; 
+}
+#contenedor_inputs, #contenedor_categorias{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+    /* EOS */
+  </style>
+
+  
+
+    
+</head>
+<body>
+
+<div style="border: 1px solid red">
+  <!-- 
+    PERMITIR AGRUPAR POR 
+    CATEGORIA DE OBJETO
+    RANGO DEL RECURSO MAS VALIOSO AL RECYCLAR, EJ: GRUPO 1, ENTRE 0 Y 200 METAL, GRUPO 2, ENTRE 201 Y 400 METAL...
+    NINGUNO
+    
+    AGREGAR OPCION PARA QUITAR OBJETOS NO OBTENIBLES
+    AGREGAR OPCION PARA CREAR FILTRO PARA CADA OBJETO, SEA BUENO O MALO
+    AGREGAR OPCION PARA OPTIMIZAR EN BASE A EXCLUIR O INCLUIR, TRATAR DE USAR LA MENOR CANTIDAD DE FILTROS
+    AGREGAR OPCION PARA QUITAR CATEGORIAS DE OBJETO
+    AGREGAR OPCION PARA QUITAR OBJETOS COMUNES COMO BAULES Y KIT DE ROPA, MUROS
+    AGREGAR OPCION PARA NO AGREGAR SI CONTIENE RECURSO, O AGREGAR SI TIENE
+    AGREGAR OPCION PARA OPTIMIZAR UTILIZANDO CATEGORIAS DE FILTRO DE RUST
+    
+    AGREGAR OPCION PARA QUE EL INPUT SE APLIQUE AL STACK O AL INDIVIDUAL, O AMBOS TALVEZ
+  -->
+<h1>
+  THIS TOOLS IS FOR FILTERING THE ITEMS TO BE RECYCLED
+</h1>
+<h2>
+  to make this work you should at least select 1 resource or component, categories work after the resource/component match
+</h2>
+
+  <div id="contenedor_filtros">
+  
+  </div>
+
+<button onclick="Filtrar_Tabla()">
+ TEST
+</button>
+
+
+<!-- DEFINIR CUALES SON LOS ESCENTIAL ITEMS-->
+<input type="checkbox" name="escential_items">
+<label for="escential_items">
+Do not touch Escential Items
+</label>
+
+
+
+<input type="radio" name="recycle" id="FullRecycle" value="1" checked>
+<label for="recycle">FULL RECYCLE</label>
+<input type="radio" name="recycle" value="0" >
+<label for="recycle">NORMAL RECYCLE</label>
+
+</div>
+
+<div id="result">
+
+</div>
+
+<!-- AGREGAR DESCRIPCION EN HOVER DE LAS CELDAS DEL HEADER -->
+<table>
+  <thead>
+    <tr>
+      <th id="img">
+        IMG
+      </th>
+      <th>
+        NAME
+      </th>
+      <th>
+        RECY
+      </th>
+      <th>
+        FULL RECY
+      </th>
+      <th>
+        MAX STACK
+      </th>
+      <th>
+        MAX STACK FULL RECY
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+</table>
+
+    <script src="js.js" type="module"></script>
+
+
+
+
+
+
+
+</body></html>
